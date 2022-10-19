@@ -2,6 +2,7 @@ from PIL import Image
 from os import listdir
 from os.path import isfile, join
 
+print('hello')
 name_of_file = input('Please enter name of pdf you want to create: ')
 
 # get names of all files in folder
@@ -11,7 +12,7 @@ to_convert = []
 
 # convert images
 for image in images[1:]:
-    im = Image.open({image})
+    im = Image.open(image)
 
     to_convert.append(im.convert('RGB'))
 
